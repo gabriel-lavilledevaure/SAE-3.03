@@ -377,28 +377,26 @@ header,
 }
 
 /* Dataviz 3 : overlay 3/4 sur la glace */
+/* SECTION 3 - Dataviz */
 .dataviz--3 {
-  position: relative;
-  display: inline-block;
+  display: grid;
+  grid-template-areas: "stack";
+  place-items: center;
   .dataviz__img {
-    display: block;
+    grid-area: stack;
+    width: 100%;
     height: auto;
-    width: auto; /* on laisse l’image décider (comme avant) */
+    display: block;
   }
-
   .dataviz__desc {
+    grid-area: stack;
     font-family: var(--font-desc);
     font-size: 15rem;
     font-weight: 700;
     color: var(--color-darkblue);
 
-    position: absolute;
-    left: 50%;
-    top: 60%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-    pointer-events: none;
-    transform-origin: 50% 50%;
+    margin: 0;
+    z-index: 1;
   }
 }
 
