@@ -116,7 +116,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const header = document.querySelector(".header");
   const layer = document.querySelector(".color__layer");
 
-  const size = 700; // Taille de la flaque
+  const size = 800; // Taille de la flaque
 
   header.addEventListener("mousemove", (e) => {
     const rect = header.getBoundingClientRect();

@@ -169,8 +169,8 @@ header,
   -webkit-mask-repeat: no-repeat, no-repeat;
   mask-repeat: no-repeat, no-repeat;
 
-  -webkit-mask-size: 100% 100%, 700px 700px;
-  mask-size: 100% 100%, 700px 700px;
+  -webkit-mask-size: 100% 100%, 800px 800px;
+  mask-size: 100% 100%, 800px 800px;
 
   mask-composite: exclude;
 }
