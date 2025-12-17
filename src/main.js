@@ -91,6 +91,27 @@ lottieS8.addEventListener("load", () => {
   });
 });
 
+// ScrollTrigger pour l'animation Lottie dans la section 10
+const lottieS10 = new DotLottie({
+  canvas: document.querySelector("#section10__canvas"),
+  src: "", // à changer URGENT
+  autoplay: false,
+  loop: false,
+});
+
+lottieS10.addEventListener("load", () => {
+  ScrollTrigger.create({
+    trigger: "#section10__canvas",
+    start: "top bottom",
+    end: "bottom bottom",
+    markers: true,
+    onEnter: () => lottieS10.play(),
+    onLeave: () => lottieS10.play(),
+    onEnterBack: () => lottieS10.play(),
+    onLeaveBack: () => lottieS10.play(),
+  });
+});
+
 //GSAP Animations
 // Animations Desription
 document.addEventListener("DOMContentLoaded", () => {

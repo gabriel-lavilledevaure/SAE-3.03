@@ -540,3 +540,16 @@ header,
   font-family: var(--font-title);
   font-size: 2.5rem;
 }
+
+/* Section 10 */
+
+.section__10 {
+  background-color: var(--color-darkblue);
+  color: var(--color-beige);
+}
+
+.section__10 .section__title,
+.section__10 .section__desc,
+.section__10 .section__descvalue {
+  color: var(--color-beige);
+}
