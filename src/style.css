@@ -416,6 +416,23 @@ header,
   background-repeat: no-repeat;
   background-position: center bottom;
   background-size: 120%;
+  .section__content {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+
+    align-items: center;
+    justify-content: center;
+    margin-inline: auto;
+  }
+
+  .section__desc {
+    max-width: 90rem;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    padding-bottom: 2rem;
+    text-align: center;
+  }
 }
 
 /* Dataviz 5 (blur + ligne) */
