@@ -132,6 +132,27 @@ lottieS10.addEventListener("load", () => {
   });
 });
 
+// ScrollTrigger pour l'animation Lottie dans la section 14
+const lottieS14 = new DotLottie({
+  canvas: document.querySelector("#section14__canvas"),
+  src: "https://lottie.host/012da5ee-7239-40e1-bf7a-53612ce14891/TfXcFdwHKO.lottie",
+  autoplay: false,
+  loop: false,
+});
+
+lottieS14.addEventListener("load", () => {
+  ScrollTrigger.create({
+    trigger: "#section14__canvas",
+    start: "top bottom",
+    end: "bottom bottom",
+    markers: false,
+    onEnter: () => lottieS14.play(),
+    onLeave: () => lottieS14.play(),
+    onEnterBack: () => lottieS14.play(),
+    onLeaveBack: () => lottieS14.play(),
+  });
+});
+
 //GSAP Animations
 // Animations Desription
 document.addEventListener("DOMContentLoaded", () => {

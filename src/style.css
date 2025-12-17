@@ -612,6 +612,25 @@ header,
   height: 600px;
 }
 
+/* Section 14 */
+.section--14 {
+  background-color: var(--color-beige);
+  .section__title,
+  .section__desc,
+  .section__descvalue {
+    color: var(--color-noir);
+  }
+
+  .section__content {
+    margin-inline: auto;
+  }
+}
+
+.section__canvas--14 {
+  width: 600px;
+  height: 600px;
+}
+
 /* Footer */
 
 .section--footer {
