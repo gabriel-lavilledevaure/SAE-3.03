@@ -377,7 +377,6 @@ header,
 }
 
 /* Dataviz 3 : overlay 3/4 sur la glace */
-/* SECTION 3 - Dataviz */
 .dataviz--3 {
   display: grid;
   grid-template-areas: "stack";
@@ -429,9 +428,7 @@ header,
     width: 100%;
     height: auto;
   }
-  .dataviz__img--blur {
-    /* tu gardes ton effet existant si tu en avais un ailleurs */
-  }
+
   .dataviz__descdroite,
   .dataviz__descgauche {
     display: flex;
@@ -501,6 +498,8 @@ header,
 .section--9 {
   background-color: var(--color-lightyellow);
   text-align: center;
+  .section__desc {
+  }
 }
 
 /* SECTION 10 */
