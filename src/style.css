@@ -1,6 +1,4 @@
-/* =========================
-   Fonts
-========================= */
+/* Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap");
 
 @font-face {
@@ -12,9 +10,7 @@
   font-display: swap;
 }
 
-/* =========================
-   Tokens
-========================= */
+/* Root + Variables */
 :root {
   --font-title: "sensa-wild-4", sans-serif;
   --font-desc: "Syne Mono", monospace;
@@ -38,31 +34,104 @@
   --color-lightorange: #f5c190;
 }
 
-/* =========================
-   Reset / Global
-========================= */
+/* Reset CSS */
+
+/* Box sizing rules */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core body defaults */
 body {
   min-height: 100vh;
-  height: 100%;
-  overflow-x: hidden;
-  font-family: var(--font-desc);
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
 }
 
 .js-split-desc {
   overflow: hidden;
 }
 
-/* =========================
-   Scroll Snap
-========================= */
+/* Scroll Snap */
 html {
   scroll-snap-type: y mandatory;
 }
@@ -72,9 +141,7 @@ header,
   scroll-snap-align: start;
 }
 
-/* =========================
-   Header (hero)
-========================= */
+/* Header */
 .header {
   position: relative;
   height: 100vh;
@@ -108,9 +175,7 @@ header,
   mask-composite: exclude;
 }
 
-/* =========================================================
-   SECTION (Base commune) — BEM
-========================================================= */
+/* Section (Global) */
 .section {
   min-height: 100vh;
   display: flex;
@@ -174,9 +239,7 @@ header,
   background-clip: text;
 }
 
-/* =========================================================
-   Dataviz (commun)
-========================================================= */
+/* Dataviz (Tout ce qui est commun) */
 .dataviz {
   margin-top: 2rem;
 }
@@ -208,9 +271,7 @@ header,
   height: auto;
 }
 
-/* =========================================================
-   SECTION 1 — locales
-========================================================= */
+/* Section 1 */
 .section__1 {
   background-color: var(--color-beige);
   position: relative;
@@ -248,9 +309,7 @@ header,
   font-size: 4rem;
 }
 
-/* =========================================================
-   SECTION 2 — locales
-========================================================= */
+/* Section 2 */
 .section__2 {
   background: var(--color-lightpink);
 }
@@ -271,9 +330,7 @@ header,
   font-size: 3rem;
 }
 
-/* =========================================================
-   SECTION 3 — locales
-========================================================= */
+/* Section 3 */
 .section__3 {
   background-color: var(--color-darkblue);
   color: var(--color-beige);
@@ -331,9 +388,7 @@ header,
   transform-origin: 50% 50%;
 }
 
-/* =========================================================
-   SECTION 4 — locales
-========================================================= */
+/* Section 4 */
 .section__4 {
   background-color: var(--color-lightyellow);
 }
@@ -343,9 +398,7 @@ header,
   height: 600px;
 }
 
-/* =========================================================
-   SECTION 5 — locales
-========================================================= */
+/* Section 5 */
 .section__5 {
   background-color: var(--color-beige);
   background-image: url("/bggreen.svg");
@@ -372,36 +425,10 @@ header,
   --blur-fill: 0%;
 }
 
-.dataviz5::after {
-  content: "";
-  position: absolute;
-  left: 6%;
-  right: 6%;
-  height: 3px;
-  bottom: var(--blur-fill);
-  transform: translateY(50%);
-  background: rgba(121, 177, 189, 0.95);
-  border-radius: 999px;
-  filter: blur(0.2px);
-  pointer-events: none;
-  z-index: 5;
-}
-
 .dataviz5__img {
   display: block;
   width: 100%;
   height: auto;
-}
-
-.dataviz5__img--blur {
-  position: absolute;
-  inset: 0;
-  z-index: 4;
-  pointer-events: none;
-  filter: blur(18px) saturate(1.15) contrast(1.05);
-  opacity: 0.9;
-  clip-path: inset(calc(100% - var(--blur-fill)) 0 0 0);
-  will-change: clip-path;
 }
 
 .dataviz5__descdroite,
