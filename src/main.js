@@ -62,7 +62,6 @@ lottieS7.addEventListener("load", () => {
     trigger: "#section7__canvas",
     start: "top bottom",
     end: "bottom bottom",
-    markers: true,
     onEnter: () => lottieS7.play(),
     onLeave: () => lottieS7.play(),
     onEnterBack: () => lottieS7.play(),
@@ -83,7 +82,7 @@ lottieS8.addEventListener("load", () => {
     trigger: "#section8__canvas",
     start: "top bottom",
     end: "bottom bottom",
-    markers: true,
+    markers: false,
     onEnter: () => lottieS8.play(),
     onLeave: () => lottieS8.play(),
     onEnterBack: () => lottieS8.play(),
@@ -104,13 +103,14 @@ lottieS9.addEventListener("load", () => {
     trigger: "#section9__canvas",
     start: "top bottom",
     end: "bottom bottom",
-    markers: true,
+    markers: false,
     onEnter: () => lottieS9.play(),
     onLeave: () => lottieS9.play(),
     onEnterBack: () => lottieS9.play(),
     onLeaveBack: () => lottieS9.play(),
   });
 });
+
 // ScrollTrigger pour l'animation Lottie dans la section 10
 const lottieS10 = new DotLottie({
   canvas: document.querySelector("#section10__canvas"),
@@ -124,7 +124,7 @@ lottieS10.addEventListener("load", () => {
     trigger: "#section10__canvas",
     start: "top bottom",
     end: "bottom bottom",
-    markers: true,
+    markers: false,
     onEnter: () => lottieS10.play(),
     onLeave: () => lottieS10.play(),
     onEnterBack: () => lottieS10.play(),

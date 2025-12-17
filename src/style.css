@@ -598,3 +598,16 @@ header,
     font-size: 3rem;
   }
 }
+
+/* Section 13 */
+.section--13 {
+  background-color: var(--color-lightgreen);
+  .section__content {
+    margin-inline: auto;
+  }
+}
+
+.section__canvas--13 {
+  width: 600px;
+  height: 600px;
+}
