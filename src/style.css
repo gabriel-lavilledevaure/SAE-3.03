@@ -544,14 +544,13 @@ header,
   .section__title {
     align-self: flex-start;
   }
+
   .section__content {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    align-self: center;
     gap: 10rem;
   }
+
   .section__desc {
     align-self: center;
     max-width: 35rem;
@@ -560,6 +559,7 @@ header,
     padding-bottom: 2rem;
     text-align: center;
   }
+
   .section__descvalue {
     font-size: 3rem;
   }
