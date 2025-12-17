@@ -19,7 +19,7 @@
   --color-noir: #232323;
 
   --color-darkblue: #2f4157;
-  --color-lightblue: #79b1bd;
+  --color-lightblue: #b6d0d4;
 
   --color-pink: #fa5dae;
   --color-lightpink: #f7a6cd;
@@ -610,4 +610,22 @@ header,
 .section__canvas--13 {
   width: 600px;
   height: 600px;
+}
+
+/* Footer */
+
+.section--footer {
+  background-color: var(--color-lightblue);
+  color: var(--color-noir);
+  text-align: center;
+  padding: 5rem 5rem;
+  .section__title {
+    font-size: 2.5rem;
+  }
+  .section__desc {
+    font-size: 1.25rem;
+    max-width: 70rem;
+    margin: auto;
+    margin-top: 1rem;
+  }
 }
