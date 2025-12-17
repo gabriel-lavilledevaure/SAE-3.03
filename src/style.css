@@ -518,11 +518,15 @@ header,
 .section--11 {
   background-color: var(--color-lightpink);
   color: var(--color-noir);
+  .section__title {
+    align-self: flex-start;
+  }
   .section__content {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    align-self: center;
   }
   .section__desc {
     max-width: 40rem;
