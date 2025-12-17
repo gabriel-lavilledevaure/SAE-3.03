@@ -156,35 +156,35 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Animation Section 1
 // Flaque qui apparaît au scroll
-gsap.from(".section1__flaque", {
+gsap.from("#s1 .section__flaque", {
   y: 50,
   opacity: 0,
   scale: 0.95,
   duration: 0.8,
   ease: "power2.out",
   scrollTrigger: {
-    trigger: ".section__1",
+    trigger: "#s1",
     start: "top 80%",
   },
 });
 
 // Terre qui tourne au scroll
-gsap.to(".dataviz__img", {
+gsap.to("#s1 .dataviz--1 .dataviz__img", {
   rotation: 360,
   duration: 2,
   scrollTrigger: {
-    trigger: ".section__1",
+    trigger: "#s1",
     scrub: true,
   },
 });
 
 // Animation Section 2 en ScrollTrigger
-const section2Bg = document.querySelector(".section__2 .section__big");
+const section2Bg = document.querySelector("#s2 .section__big");
 
 gsap.to(section2Bg, {
   backgroundSize: "100% 60%, 100% 100%", // bleu à 70%
   scrollTrigger: {
-    trigger: ".section__2 .section__big",
+    trigger: "#s2 .section__big",
     start: "top 70%",
     end: "top 40%",
     scrub: true,
@@ -194,7 +194,7 @@ gsap.to(section2Bg, {
 // Animation Dataviz3 Glace
 const crackTl = gsap.timeline({
   scrollTrigger: {
-    trigger: ".section__3 .section__content",
+    trigger: "#s3 .section__content",
     start: "50% 70%",
     toggleActions: "play none none none",
   },
@@ -202,7 +202,7 @@ const crackTl = gsap.timeline({
 
 // petit choc sur la glace
 crackTl.fromTo(
-  ".dataviz3__img",
+  "#s3 .dataviz--3 .dataviz__img",
   { rotation: 0, scale: 1 },
   {
     rotation: -1.5,
@@ -217,7 +217,7 @@ crackTl.fromTo(
 
 // apparition du 3/4
 crackTl.fromTo(
-  ".dataviz3__desc",
+  "#s3 .dataviz--3 .dataviz__desc",
   { opacity: 0, scale: 2, filter: "blur(6px)" },
   {
     opacity: 1,
@@ -231,7 +231,7 @@ crackTl.fromTo(
 
 // Tremblement” du 3/4
 crackTl.to(
-  ".dataviz3__desc",
+  "#s3 .dataviz--3 .dataviz__desc",
   {
     x: -2,
     y: 1,
@@ -244,23 +244,23 @@ crackTl.to(
 );
 
 // Animation Section 5 - Goutte qui se floutte
-gsap.to(".dataviz5__img--blur", {
+gsap.to("#s5 .dataviz--5 .dataviz__img--blur", {
   clipPath: "inset(13% 0 0 0)",
   opacity: 1,
   ease: "none",
   scrollTrigger: {
-    trigger: ".section__5",
+    trigger: "#s5",
     start: "top 80%",
     end: "top 30%",
     scrub: true,
   },
 });
 
-gsap.to(".dataviz5", {
+gsap.to("#s5 .dataviz--5", {
   "--blur-fill": "50%",
   ease: "none",
   scrollTrigger: {
-    trigger: ".section__5",
+    trigger: "#s5",
     start: "top 80%",
     end: "top 30%",
     scrub: true,

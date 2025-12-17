@@ -18,9 +18,9 @@
 
   <main class="main">
     <!-- SECTION 1 -->
-    <section class="section section__1 sectionscroll" id="s1">
-      <img class="section1__flaque" src="/flaqueS1.svg" alt="flaque" aria-hidden="true" />
-      <img class="section1__goutte" src="/Goutteplonge.svg" alt="goutte" aria-hidden="true" />
+    <section class="section section--1 sectionscroll" id="s1">
+      <img class="section__flaque" src="/flaqueS1.svg" alt="flaque" aria-hidden="true" />
+      <img class="section__goutte" src="/Goutteplonge.svg" alt="goutte" aria-hidden="true" />
 
       <h2 class="section__title">Beaucoup d’eau… très peu disponible</h2>
 
@@ -32,7 +32,7 @@
           apparente masque une réalité plus complexe.
         </p>
 
-        <section class="dataviz">
+        <section class="dataviz dataviz--1">
           <p class="dataviz__descgauche">
             <span class="dataviz__descvalue">28%</span>Terre
           </p>
@@ -45,7 +45,7 @@
     </section>
 
     <!-- SECTION 2 -->
-    <section class="section section__2 sectionscroll" id="s2">
+    <section class="section section--2 sectionscroll" id="s2">
       <h2 class="section__title">L’eau douce : une ressource rare</h2>
 
       <p class="section__big">2,8%</p>
@@ -59,11 +59,11 @@
     </section>
 
     <!-- SECTION 3 -->
-    <section class="section section__3 sectionscroll" id="s3">
+    <section class="section section--3 sectionscroll" id="s3">
       <h2 class="section__title">Une eau majoritairement inaccessible</h2>
 
       <section class="section__content">
-        <section class="section3__left">
+        <section class="section__left">
           <p class="section__desc js-split-desc">
             Environ
             <span class="section__descvalue">les trois quarts</span> de l’eau
@@ -73,18 +73,18 @@
             principales ressources utilisables.
           </p>
 
-          <img class="section3__goutte" src="/Gouttepleure.svg" alt="" aria-hidden="true" />
+          <img class="section__goutte" src="/Gouttepleure.svg" alt="" aria-hidden="true" />
         </section>
 
-        <section class="dataviz3">
-          <img class="dataviz3__img" src="/glace.svg" alt="Glace_Dataviz3" />
-          <p class="dataviz3__desc">3/4</p>
+        <section class="dataviz dataviz--3">
+          <img class="dataviz__img" src="/glace.svg" alt="Glace_Dataviz3" />
+          <p class="dataviz__desc">3/4</p>
         </section>
       </section>
     </section>
 
     <!-- SECTION 4 -->
-    <section class="section section__4 sectionscroll" id="s4">
+    <section class="section section--4 sectionscroll" id="s4">
       <h2 class="section__title">Qui consomme le plus d’eau ?</h2>
 
       <section class="section__content">
@@ -98,33 +98,33 @@
           <span class="section__descvalue">4%</span>.
         </p>
 
-        <section class="dataviz4">
-          <canvas class="section4__canvas" id="section4__canvas"></canvas>
+        <section class="dataviz dataviz--4">
+          <canvas class="section__canvas section__canvas--4" id="section4__canvas"></canvas>
         </section>
       </section>
     </section>
 
     <!-- SECTION 5 -->
-    <section class="section section__5 sectionscroll" id="s5">
+    <section class="section section--5 sectionscroll" id="s5">
       <h2 class="section__title">
         À la maison, l’eau coule vite… et se perd souvent
       </h2>
 
-      <section class="section5__content">
-        <section class="dataviz5">
-          <p class="dataviz5__descgauche">
+      <section class="section__content section__content--col">
+        <section class="dataviz dataviz--5">
+          <p class="dataviz__descgauche">
             <span class="dataviz__descvalue">148L</span>
           </p>
 
-          <img class="dataviz5__img" src="/goutte.svg" alt="goutte_Dataviz5" />
-          <img class="dataviz5__img dataviz5__img--blur" src="/goutte.svg" alt="" aria-hidden="true" />
+          <img class="dataviz__img" src="/goutte.svg" alt="goutte_Dataviz5" />
+          <img class="dataviz__img dataviz__img--blur" src="/goutte.svg" alt="" aria-hidden="true" />
 
-          <p class="dataviz5__descdroite">
+          <p class="dataviz__descdroite">
             <span class="dataviz__descvalue">4000L à 9000L</span>Terre
           </p>
         </section>
 
-        <p class="section__desc js-split-desc section5__desc">
+        <p class="section__desc js-split-desc">
           La consommation d’eau potable représente environ
           <span class="section__descvalue">148 litres par jour et par personne</span>, tandis que l’empreinte en eau
           cachée, qui inclut toute l’eau
@@ -135,7 +135,7 @@
     </section>
 
     <!-- SECTION 6 -->
-    <section class="section section__6 sectionscroll" id="s6">
+    <section class="section section--6 sectionscroll" id="s6">
       <h2 class="section__title">
         À la maison, l’eau coule vite… et se perd souvent
       </h2>
@@ -149,14 +149,14 @@
           <span class="section__descvalue">4 000 à 9 000 litres par jour et par personne</span>.
         </p>
 
-        <section class="dataviz6">
-          <canvas class="section6__canvas" id="section6__canvas"></canvas>
+        <section class="dataviz dataviz--6">
+          <canvas class="section__canvas section__canvas--6" id="section6__canvas"></canvas>
         </section>
       </section>
     </section>
 
     <!-- SECTION 7 -->
-    <section class="section section__7 sectionscroll" id="s7">
+    <section class="section section--7 sectionscroll" id="s7">
       <h2 class="section__title">Les fuites, un gaspillage invisible</h2>
 
       <section class="section__content">
@@ -167,47 +167,47 @@
           normale.
         </p>
 
-        <section class="dataviz7">
-          <img class="dataviz7__svg" src="/robinet.svg" alt="Robinet" />
-          <canvas class="section7__canvas" id="section7__canvas"></canvas>
+        <section class="dataviz dataviz--7">
+          <img class="dataviz__svg" src="/robinet.svg" alt="Robinet" />
+          <canvas class="section__canvas section__canvas--7" id="section7__canvas"></canvas>
         </section>
       </section>
     </section>
 
     <!-- SECTION 8 -->
-    <section class="section section__8 sectionscroll" id="s8">
+    <section class="section section--8 sectionscroll" id="s8">
       <h2 class="section__title">Agir pour préserver l'eau</h2>
 
       <section class="section__content">
-        <section class="section8__text">
+        <section class="section__text">
           <p class="section__desc js-split-desc">
             Le réseau national d’assainissement et de distribution de l’eau
             perd environ
           </p>
-          <p class="section8__descvalue js-split-desc">1 litre sur 5</p>
+          <p class="section__descvalue section__descvalue--xl js-split-desc">1 litre sur 5</p>
           <p class="section__desc js-split-desc">à cause des fuites.</p>
         </section>
 
-        <section class="dataviz8">
-          <canvas class="section8__canvas" id="section8__canvas"></canvas>
+        <section class="dataviz dataviz--8">
+          <canvas class="section__canvas section__canvas--8" id="section8__canvas"></canvas>
         </section>
       </section>
     </section>
 
     <!-- SECTION 9 -->
-    <section class="section section__9 sectionscroll" id="s9">
-      <h2 class="section__title section9__title">
+    <section class="section section--9 sectionscroll" id="s9">
+      <h2 class="section__title section__title--center">
         Une consommation d’eau souvent invisible
       </h2>
 
-      <section class="section__content section9__content">
-        <p class="section__desc js-split-desc section9__desc">
+      <section class="section__content section__content--center">
+        <p class="section__desc js-split-desc section__desc--center">
           Certains produits du quotidien nécessitent de grandes quantités
           d’eau pour être fabriqués. Produire un kilogramme de bœuf demande
           entre
-          <span class="section9__descvalue">550 et 700 litres d’eau</span>, et
+          <span class="section__descvalue">550 et 700 litres d’eau</span>, et
           un litre d’eau embouteillée nécessite en réalité
-          <span class="section9__descvalue">2 litres</span>
+          <span class="section__descvalue">2 litres</span>
           d’eau si l’on prend en compte l’ensemble du processus de production.
           de notre consommation d’eau est indirecte, liée à la production des
           biens et services que nous utilisons quotidiennement.
@@ -216,29 +216,49 @@
     </section>
 
     <!-- SECTION 10 -->
-    <section class="section section__10 sectionscroll" id="s10">
-      <h2 class="section__title section10__title">
+    <section class="section section--10 sectionscroll" id="s10">
+      <h2 class="section__title">
         L’industrie textile, un impact majeur sur l’eau
       </h2>
 
       <section class="section__content">
-        <p class="section__desc js-split-desc section10__desc">
-          À l’échelle mondiale, l’industrie textile prélève à elle seule <span class="section10__descvalue">4%</span>
+        <p class="section__desc js-split-desc">
+          À l’échelle mondiale, l’industrie textile prélève à elle seule <span class="section__descvalue">4%</span>
           de
           toute l’eau potable consommée. Elle est également responsable d’environ
-          <span class="section10__descvalue">20%</span>de la pollution industrielle de l’eau, en raison des procédés
+          <span class="section__descvalue">20%</span>de la pollution industrielle de l’eau, en raison des procédés
           de
           fabrication et de teinture des textiles.
         </p>
 
-        <section class="dataviz10">
-          <canvas class="section810__canvas" id="section10__canvas"></canvas>
-
+        <section class="dataviz dataviz--10">
+          <canvas class="section__canvas section__canvas--10" id="section10__canvas"></canvas>
         </section>
-
       </section>
     </section>
 
+    <!-- SECTION 11 -->
+    <section class="section section--11 sectionscroll" id="s11">
+      <h2 class="section__title">
+        L’industrie textile, un impact majeur sur l’eau
+      </h2>
+
+      <section class="section__content">
+        <figure class="section__figure">
+          <img src="/t-shirt.svg" alt="t-shirt" class="section__img section__img--11" />
+          <figcaption class="section__figcaption js-split-desc">
+            <p class="section__desc"><span class="section__descvalue">2700</span> litres</p>
+          </figcaption>
+        </figure>
+
+        <figure class="section__figure">
+          <img src="/jean.svg" alt="t-shirt" class="section__img section__img--11" />
+          <figcaption class="section__figcaption js-split-desc">
+            <p class="section__desc">Jusqu'à<span class="section__descvalue">7000</span> litres</p>
+          </figcaption>
+        </figure>
+      </section>
+    </section>
   </main>
 
   <script type="module" src="/src/main.js"></script>
