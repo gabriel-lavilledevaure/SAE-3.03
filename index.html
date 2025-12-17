@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SAé3.Crea.03 - gsap</title>
+  <title>L'eau</title>
 </head>
 
 <body>
@@ -19,7 +19,7 @@
     <!-- SECTION 1 -->
     <section class="section sectionscroll" id="s1">
       <img class="section1__flaque" src="/flaqueS1.svg" alt="flaque" aria-hidden="true" />
-      <img class="section1__goutte" src="./public/Goutteplonge.svg" alt="goutte">
+      <img class="section1__goutte" src="/Goutteplonge.svg" alt="goutte">
       <h2 class="section__title">Beaucoup d’eau… très peu disponible</h2>
 
       <section class="section__content">
@@ -67,7 +67,7 @@
             ressources utilisables.
           </p>
 
-          <img class="section3__goutte" src="./public/Gouttepleure.svg" alt="" aria-hidden="true" />
+          <img class="section3__goutte" src="/Gouttepleure.svg" alt="" aria-hidden="true" />
         </div>
 
         <section class="dataviz3">
@@ -95,7 +95,7 @@
         </p>
 
         <section class="dataviz4">
-          <canvas id="section4-canvas" style="width: 600px; height: 600px"></canvas>
+          <canvas class="section4__canvas" id="section4__canvas"></canvas>
         </section>
       </section>
     </section>
@@ -148,7 +148,7 @@
 
 
         <section class="dataviz6">
-          <canvas id="section6-canvas" style="width: 600px; height: 600px"></canvas>
+          <canvas class="section6__canvas" id="section6__canvas"></canvas>
         </section>
       </section>
     </section>
@@ -164,9 +164,54 @@
         </p>
 
         <section class="dataviz7">
-          <img class="dataviz7__img" src="/fuite.svg" alt="fuite_Dataviz7" />
+          <img class="dataviz7__svg" src="/robinet.svg" alt="Robinet">
+          <canvas class="section7__canvas" id="section7__canvas"></canvas>
         </section>
       </section>
+
+    </section>
+
+    <!-- SECTION 8 -->
+
+    <section class="section8 sectionscroll" id="s8">
+      <h2 class="section8__title">Agir pour préserver l'eau</h2>
+      <section class="section8__content">
+        <section class="section8__text">
+          <p class="section8__desc js-split-desc">
+            Le réseau national d’assainissement et de distribution de l’eau perd environ
+          </p>
+          <p class="section8__descvalue js-split-desc">
+            1 litre sur 5</p>
+          <p class="section8__desc js-split-desc">à cause des fuites.</p>
+
+        </section>
+        <section class="dataviz8">
+          <canvas class="section8__canvas" id="section8__canvas"></canvas>
+        </section>
+      </section>
+    </section>
+
+
+    <!-- SECTION 9 -->
+
+    <section class="section9 sectionscroll" id="s8">
+      <h2 class="section9__title">Une consommation d’eau souvent invisible</h2>
+      <section class="section9__content">
+        <p class="section9__desc js-split-desc">
+
+
+          Certains produits du quotidien nécessitent de grandes quantités d’eau pour être fabriqués. Produire un
+          kilogramme de bœuf demande entre <span class="section9__descvalue"> 550 et 700 litres d’eau</span>, et un
+          litre d’eau embouteillée nécessite en réalité <span class="section9__descvalue">2 litres</span>
+          d’eau si l’on prend en compte l’ensemble du processus de production.
+          de notre consommation d’eau est indirecte, liée à la production des biens et services que
+          nous utilisons quotidiennement.
+        </p>
+
+
+      </section>
+
+
 
 
   </main>

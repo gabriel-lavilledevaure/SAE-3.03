@@ -5,17 +5,21 @@ import SplitText from "gsap/SplitText";
 
 import { DotLottie } from "@lottiefiles/dotlottie-web";
 
+gsap.registerPlugin(ScrollTrigger, SplitText);
+
+// Lottie Animations
+
+// ScrollTrigger pour l'animation Lottie dans la section 4
 const lottieS4 = new DotLottie({
-  canvas: document.querySelector("#section4-canvas"),
+  canvas: document.querySelector("#section4__canvas"),
   src: "https://lottie.host/fe3c633a-d9de-4d71-bd69-6c28c8954c53/m1CXojessW.lottie",
   autoplay: false,
   loop: false,
 });
 
-// ScrollTrigger pour l'animation Lottie dans la section 4
 lottieS4.addEventListener("load", () => {
   ScrollTrigger.create({
-    trigger: "#section4-canvas",
+    trigger: "#section4__canvas",
     start: "top center",
     end: "bottom center",
     onEnter: () => lottieS4.play(),
@@ -25,28 +29,69 @@ lottieS4.addEventListener("load", () => {
   });
 });
 
-const LottieS6 = new DotLottie({
-  canvas: document.querySelector("#section6-canvas"),
+// ScrollTrigger pour l'animation Lottie dans la section 6
+const lottieS6 = new DotLottie({
+  canvas: document.querySelector("#section6__canvas"),
   src: "https://lottie.host/bbc39380-40f5-449c-8419-ac3b459b3459/Nvd3RfCLhV.lottie",
   autoplay: false,
   loop: false,
 });
 
-// ScrollTrigger pour l'animation Lottie dans la section 6
-LottieS6.addEventListener("load", () => {
+lottieS6.addEventListener("load", () => {
   ScrollTrigger.create({
-    trigger: "#section6-canvas",
+    trigger: "#section6__canvas",
     start: "top center",
     end: "bottom center",
-    onEnter: () => LottieS6.play(),
-    onLeave: () => LottieS6.pause(),
-    onEnterBack: () => LottieS6.play(),
-    onLeaveBack: () => LottieS6.pause(),
+    onEnter: () => lottieS6.play(),
+    onLeave: () => lottieS6.pause(),
+    onEnterBack: () => lottieS6.play(),
+    onLeaveBack: () => lottieS6.pause(),
   });
 });
 
-gsap.registerPlugin(ScrollTrigger, SplitText);
+// ScrollTrigger pour l'animation Lottie dans la section 7
+const lottieS7 = new DotLottie({
+  canvas: document.querySelector("#section7__canvas"),
+  src: "https://lottie.host/35e5f6a4-1118-4850-af16-d05e1e3c76ea/l6kIJRiD3T.lottie",
+  autoplay: false,
+  loop: false,
+});
 
+lottieS7.addEventListener("load", () => {
+  ScrollTrigger.create({
+    trigger: "#section7__canvas",
+    start: "top bottom",
+    end: "bottom bottom",
+    markers: true,
+    onEnter: () => lottieS7.play(),
+    onLeave: () => lottieS7.play(),
+    onEnterBack: () => lottieS7.play(),
+    onLeaveBack: () => lottieS7.play(),
+  });
+});
+
+// ScrollTrigger pour l'animation Lottie dans la section 8
+const lottieS8 = new DotLottie({
+  canvas: document.querySelector("#section8__canvas"),
+  src: "https://lottie.host/35e5f6a4-1118-4850-af16-d05e1e3c76ea/l6kIJRiD3T.lottie", // à changer URGENT
+  autoplay: false,
+  loop: false,
+});
+
+lottieS8.addEventListener("load", () => {
+  ScrollTrigger.create({
+    trigger: "#section8__canvas",
+    start: "top bottom",
+    end: "bottom bottom",
+    markers: true,
+    onEnter: () => lottieS8.play(),
+    onLeave: () => lottieS8.play(),
+    onEnterBack: () => lottieS8.play(),
+    onLeaveBack: () => lottieS8.play(),
+  });
+});
+
+//GSAP Animations
 // Animations Desription
 document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll(".js-split-desc").forEach((el) => {
