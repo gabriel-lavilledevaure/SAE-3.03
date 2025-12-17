@@ -477,11 +477,18 @@ header,
 /* SECTION 7 */
 .section--7 {
   background-color: var(--color-lightorange);
+  .section__content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10rem;
+    margin-inline: auto;
+  }
 }
 
 .section__canvas--7 {
-  width: 500px;
-  height: 500px;
+  width: 400px;
+  height: 400px;
 }
 
 .dataviz--7 {
@@ -515,8 +522,11 @@ header,
 .section--9 {
   background-color: var(--color-lightyellow);
   text-align: center;
-  .section__desc {
-  }
+}
+
+.section__canvas--9 {
+  width: 600px;
+  height: 600px;
 }
 
 /* SECTION 10 */
@@ -528,6 +538,10 @@ header,
   .section__descvalue {
     color: var(--color-beige);
   }
+}
+.section__canvas--10 {
+  width: 600px;
+  height: 600px;
 }
 
 /* SECTION 11 (référence) */
