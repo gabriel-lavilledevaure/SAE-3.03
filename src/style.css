@@ -108,77 +108,26 @@ header,
   mask-composite: exclude;
 }
 
-/* =========================
-   Layout commun sections
-========================= */
-.section,
-.section3,
-.section4,
-.section5,
-.section6,
-.section7,
-.section8,
-.section9 {
+/* =========================================================
+   SECTION (Base commune) — BEM
+========================================================= */
+.section {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  text-align: center;
+  justify-content: center;
   gap: 2.5rem;
   padding: 5rem 10vw;
+  text-align: left;
+  color: var(--color-noir);
 }
 
-.section__content,
-.section3__content,
-.section4__content,
-.section5__content,
-.section6__content,
-.section7__content,
-.section8__content,
-.section9__content {
+.section__content {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 5rem;
-}
-
-.section__text {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  z-index: 1;
-  text-align: left;
-}
-
-/* =========================
-   Section 1
-========================= */
-.section {
-  background-color: var(--color-beige);
-  position: relative;
-  color: var(--color-noir);
-}
-
-.section1__flaque {
-  position: absolute;
-  left: 0;
-  top: 10vh;
-  width: 45vw;
-  max-width: 700px;
-  min-width: 420px;
-  height: auto;
-  z-index: 0;
-  pointer-events: none;
-}
-
-.section1__goutte {
-  position: absolute;
-  left: 14vw;
-  top: 20vh;
-  width: 10vw;
-  max-width: 150px;
-  height: auto;
-  z-index: 2;
-  pointer-events: none;
 }
 
 .section__title {
@@ -191,19 +140,43 @@ header,
 
 .section__desc {
   font-family: var(--font-desc);
-  text-align: left;
-
   font-size: 1.5rem;
-  max-width: 30rem;
-  margin-top: 10rem;
+  max-width: 35rem;
+  text-align: left;
 }
 
 .section__descvalue {
   font-family: var(--font-title);
-  font-size: 4rem;
+  font-size: 2.5rem;
 }
 
-/* Dataviz commun */
+.section__big {
+  margin: auto 0;
+  align-self: center;
+  font-family: var(--font-title);
+  font-size: clamp(6rem, 18vw, 14rem);
+  line-height: 1;
+
+  /* base blanche + remplissage bleu */
+  background-image: linear-gradient(
+      to top,
+      var(--color-lightblue) 0%,
+      var(--color-lightblue) 100%
+    ),
+    linear-gradient(#ffffff 0 0);
+  background-size: 100% 0%, 100% 100%;
+  background-position: bottom, bottom;
+  background-repeat: no-repeat;
+
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+/* =========================================================
+   Dataviz (commun)
+========================================================= */
 .dataviz {
   margin-top: 2rem;
 }
@@ -235,76 +208,85 @@ header,
   height: auto;
 }
 
-/* =========================
-   Section 2 (slide 2,8%)
-========================= */
-.section2 {
-  min-height: 100vh;
+/* =========================================================
+   SECTION 1 — locales
+========================================================= */
+.section__1 {
+  background-color: var(--color-beige);
+  position: relative;
+}
+
+.section1__flaque {
+  position: absolute;
+  left: 0;
+  top: 10vh;
+  width: 45vw;
+  max-width: 700px;
+  min-width: 420px;
+  height: auto;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.section1__goutte {
+  position: absolute;
+  left: 14vw;
+  top: 20vh;
+  width: 10vw;
+  max-width: 150px;
+  height: auto;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.section__1 .section__desc {
+  max-width: 30rem;
+  margin-top: 10rem;
+}
+
+.section__1 .section__descvalue {
+  font-size: 4rem;
+}
+
+/* =========================================================
+   SECTION 2 — locales
+========================================================= */
+.section__2 {
   background: var(--color-lightpink);
-  padding: 5rem 10vw;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  color: var(--color-noir);
 }
 
-.section2__title {
-  font-family: var(--font-title);
+.section__2 .section__title {
   font-size: 3rem;
-  text-align: left;
 }
 
-.section2__big {
-  margin: auto 0;
-  align-self: center;
-  font-family: var(--font-title);
-  font-size: clamp(6rem, 18vw, 14rem);
-  line-height: 1;
-
-  /* base blanche + remplissage bleu */
-  background-image: linear-gradient(
-      to top,
-      var(--color-lightblue) 0%,
-      var(--color-lightblue) 100%
-    ),
-    linear-gradient(#ffffff 0 0);
-  background-size: 100% 0%, 100% 100%;
-  background-position: bottom, bottom;
-  background-repeat: no-repeat;
-
-  color: transparent;
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
-}
-
-.section2__desc {
+.section__2 .section__desc {
   align-self: center;
   max-width: 55rem;
-  text-align: left;
-  font-family: var(--font-desc);
   font-size: 1.4rem;
   line-height: 1.5;
   padding-bottom: 2rem;
 }
 
-.section2__descvalue {
-  font-family: var(--font-title);
+.section__2 .section__descvalue {
   font-size: 3rem;
 }
 
-/* =========================
-   Section 3 (dark)
-========================= */
-.section3 {
+/* =========================================================
+   SECTION 3 — locales
+========================================================= */
+.section__3 {
   background-color: var(--color-darkblue);
+  color: var(--color-beige);
 }
 
-.section3__content {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 5rem;
+.section__3 .section__title,
+.section__3 .section__desc,
+.section__3 .section__descvalue {
+  color: var(--color-beige);
+}
+
+.section__3 .section__desc {
+  margin-top: 10rem;
 }
 
 .section3__left {
@@ -321,30 +303,6 @@ header,
   margin-top: 2rem;
   align-self: center;
   pointer-events: none;
-}
-
-.section3__title {
-  font-family: var(--font-title);
-  font-size: 2.9375rem;
-  margin-bottom: 1rem;
-  z-index: 1;
-  text-align: left;
-  color: var(--color-beige);
-}
-
-.section3__desc {
-  font-family: var(--font-desc);
-  font-size: 1.5rem;
-  max-width: 35rem;
-  text-align: left;
-  color: var(--color-beige);
-  margin-top: 10rem;
-}
-
-.section3__descvalue {
-  font-family: var(--font-title);
-  font-size: 2.5rem;
-  color: var(--color-beige);
 }
 
 /* Dataviz3 : overlay 3/4 sur la glace */
@@ -373,31 +331,11 @@ header,
   transform-origin: 50% 50%;
 }
 
-/* =========================
-   Section 4 (yellow)
-========================= */
-.section4 {
+/* =========================================================
+   SECTION 4 — locales
+========================================================= */
+.section__4 {
   background-color: var(--color-lightyellow);
-  color: var(--color-noir);
-}
-
-.section4__title {
-  font-family: var(--font-title);
-  font-size: 2.9375rem;
-  margin-bottom: 1rem;
-  z-index: 1;
-  text-align: left;
-}
-
-.section4__desc {
-  font-family: var(--font-desc);
-  font-size: 1.5rem;
-  text-align: left;
-}
-
-.section4__descvalue {
-  font-family: var(--font-title);
-  font-size: 2.5rem;
 }
 
 .section4__canvas {
@@ -405,65 +343,29 @@ header,
   height: 600px;
 }
 
-/* =========================
-   Section 5
-========================= */
-.section5 {
+/* =========================================================
+   SECTION 5 — locales
+========================================================= */
+.section__5 {
   background-color: var(--color-beige);
   background-image: url("/bggreen.svg");
   background-repeat: no-repeat;
   background-position: center bottom;
   background-size: 120%;
-  color: var(--color-noir);
 }
 
 .section5__content {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 5rem;
 }
 
-.section5__title {
-  font-family: var(--font-title);
-  font-size: 2.9375rem;
-  margin-bottom: 1rem;
-  z-index: 1;
-  text-align: left;
-}
-
 .section5__desc {
-  font-family: var(--font-desc);
-  font-size: 1.5rem;
-  text-align: left;
-  padding: 0 10rem 5rem 10rem;
 }
 
-.section5__descvalue {
-  font-family: var(--font-title);
-  font-size: 2.5rem;
-}
-
-.dataviz5__descdroite,
-.dataviz5__descgauche {
-  display: flex;
-  flex-direction: column;
-  font-family: var(--font-desc);
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.dataviz5__descdroite {
-  text-align: right;
-}
-
-.dataviz5__descgauche {
-  text-align: left;
-}
-
-/* =========================
-   Dataviz 5 (blur + ligne)
-========================= */
+/* Dataviz 5 (blur + ligne) */
 .dataviz5 {
   position: relative;
   width: min(520px, 70vw);
@@ -502,42 +404,33 @@ header,
   will-change: clip-path;
 }
 
-/* =========================
-   Section 6
-========================= */
-.section6 {
-  background-color: var(--color-lightgreen);
+.dataviz5__descdroite,
+.dataviz5__descgauche {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  color: var(--color-noir);
-}
-
-.section6__title {
-  font-family: var(--font-title);
-  font-size: 2.9375rem;
-  margin-bottom: 1rem;
-  z-index: 1;
-  text-align: left;
-}
-
-.section6__desc {
   font-family: var(--font-desc);
-  font-size: 1.5rem;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.dataviz5__descdroite {
+  text-align: right;
+}
+
+.dataviz5__descgauche {
   text-align: left;
-  max-width: 35rem;
-  margin-top: 0;
-  padding: 0;
+}
+
+/* =========================================================
+   SECTION 6 — locales
+========================================================= */
+.section__6 {
+  background-color: var(--color-lightgreen);
 }
 
 .section6__canvas {
   width: 600px;
   height: 600px;
-}
-
-.section6__descvalue {
-  font-family: var(--font-title);
-  font-size: 2.5rem;
 }
 
 .dataviz6 {
@@ -548,40 +441,11 @@ header,
   justify-content: center;
 }
 
-/*  =========================
-   Section 7
-========================= */
-.section7 {
-  min-height: 100vh; /* plein écran */
+/* =========================================================
+   SECTION 7 — locales
+========================================================= */
+.section__7 {
   background-color: var(--color-lightorange);
-  color: var(--color-noir);
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* centre verticalement le contenu */
-  padding: 5rem 10vw; /* respiration cohérente avec les autres sections */
-}
-
-.section7__title {
-  font-family: var(--font-title);
-  font-size: 2.9375rem;
-  margin-bottom: 1rem;
-  text-align: left;
-}
-
-.section7__content {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-
-  gap: 5rem;
-}
-
-.section7__desc {
-  font-family: var(--font-desc);
-  font-size: 1.5rem;
-  text-align: left;
-  max-width: 35rem;
 }
 
 .section7__canvas {
@@ -596,36 +460,16 @@ header,
   gap: 1.5rem;
 }
 
-.dataviz7__img {
-  width: 300px;
-  height: auto;
-}
-
 .dataviz7__svg {
   width: clamp(120px, 12vw, 180px);
   height: auto;
 }
 
-.section7__canvas {
-  height: auto;
-}
-
-/* =========================
-   Section 8
-========================= */
-
-.section8 {
+/* =========================================================
+   SECTION 8 — locales
+========================================================= */
+.section__8 {
   background-color: var(--color-beige);
-  padding: 5rem 10vw;
-  color: var(--color-noir);
-}
-
-.section8__title {
-  font-family: var(--font-title);
-  font-size: 2.9375rem;
-  margin-bottom: 1rem;
-  z-index: 1;
-  text-align: left;
 }
 
 .section8__text {
@@ -635,23 +479,9 @@ header,
   gap: 6rem;
 }
 
-.section8__desc {
-  font-family: var(--font-desc);
-  font-size: 1.5rem;
-  text-align: left;
-  max-width: 35rem;
-}
-
 .section8__descvalue {
   font-family: var(--font-title);
   font-size: 6.3615rem;
-}
-
-.section8__content {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 5rem;
 }
 
 .section8__canvas {
@@ -659,30 +489,23 @@ header,
   height: 600px;
 }
 
-/* =========================
-   SECTION 9
-========================= */
-
-.section9 {
+/* =========================================================
+   SECTION 9 — locales
+========================================================= */
+.section__9 {
   background-color: var(--color-lightyellow);
-  padding: 5rem 10vw;
-  color: var(--color-noir);
   text-align: center;
 }
 
 .section9__title {
-  font-family: var(--font-title);
-  font-size: 2.9375rem;
-  margin-bottom: 1rem;
-  z-index: 1;
   text-align: center;
 }
 
+.section9__content {
+  justify-content: center;
+}
+
 .section9__desc {
-  font-family: var(--font-desc);
-  font-size: 1.5rem;
-  text-align: left;
-  max-width: 35rem;
   margin: auto;
 }
 

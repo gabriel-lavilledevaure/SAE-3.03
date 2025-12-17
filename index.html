@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>L'eau</title>
+  <link rel="stylesheet" href="/style.css" />
 </head>
 
 <body>
@@ -12,14 +13,16 @@
     <section class="svg__layer">
       <img src="/bgheader.svg" alt="svg" />
     </section>
-    <section class="color__layer"></section>
+    <section class="color__layer" aria-hidden="true"></section>
   </header>
 
   <main class="main">
+
     <!-- SECTION 1 -->
-    <section class="section sectionscroll" id="s1">
+    <section class="section section__1 sectionscroll" id="s1">
       <img class="section1__flaque" src="/flaqueS1.svg" alt="flaque" aria-hidden="true" />
-      <img class="section1__goutte" src="/Goutteplonge.svg" alt="goutte">
+      <img class="section1__goutte" src="/Goutteplonge.svg" alt="goutte" aria-hidden="true" />
+
       <h2 class="section__title">Beaucoup d’eau… très peu disponible</h2>
 
       <section class="section__content">
@@ -43,55 +46,56 @@
     </section>
 
     <!-- SECTION 2 -->
-    <section class="section2 sectionscroll" id="s2">
-      <h2 class="section2__title">L’eau douce : une ressource rare</h2>
-      <p class="section2__big">2,8%</p>
-      <p class="section2__desc js-split-desc">
+    <section class="section section__2 sectionscroll" id="s2">
+      <h2 class="section__title">L’eau douce : une ressource rare</h2>
+
+      <p class="section__big">2,8%</p>
+
+      <p class="section__desc js-split-desc">
         Parmi toute l’eau présente sur Terre, seulement
-        <span class="section2__descvalue">2,8 %</span> est de l’eau douce.
+        <span class="section__descvalue">2,8 %</span> est de l’eau douce.
         C’est cette part limitée qui permet l’alimentation, l’agriculture et
         l’ensemble des usages humains.
       </p>
     </section>
 
     <!-- SECTION 3 -->
-    <section class="section3 sectionscroll" id="s3">
-      <h2 class="section3__title">Une eau majoritairement inaccessible</h2>
+    <section class="section section__3 sectionscroll" id="s3">
+      <h2 class="section__title">Une eau majoritairement inaccessible</h2>
 
-      <section class="section3__content">
-        <div class="section3__left">
-          <p class="section3__desc js-split-desc">
-            Environ <span class="section3__descvalue">les trois quarts</span> de l’eau douce sont stockés sous forme
+      <section class="section__content">
+        <section class="section3__left">
+          <p class="section__desc js-split-desc">
+            Environ <span class="section__descvalue">les trois quarts</span> de l’eau douce sont stockés sous forme
             de glaces et de neiges permanentes, et ne sont donc pas directement exploitables.
             Le reste correspond aux lacs, rivières et nappes souterraines, qui constituent nos principales
             ressources utilisables.
           </p>
 
           <img class="section3__goutte" src="/Gouttepleure.svg" alt="" aria-hidden="true" />
-        </div>
+        </section>
 
         <section class="dataviz3">
           <img class="dataviz3__img" src="/glace.svg" alt="Glace_Dataviz3" />
           <p class="dataviz3__desc">3/4</p>
         </section>
       </section>
-
     </section>
 
     <!-- SECTION 4 -->
-    <section class="section4 sectionscroll" id="s4">
-      <h2 class="section4__title">Qui consomme le plus d’eau ?</h2>
+    <section class="section section__4 sectionscroll" id="s4">
+      <h2 class="section__title">Qui consomme le plus d’eau ?</h2>
 
-      <section class="section4__content">
-        <p class="section4__desc js-split-desc">
+      <section class="section__content">
+        <p class="section__desc js-split-desc">
           L’agriculture représente
-          <span class="section4__descvalue">58%</span> de la consommation
+          <span class="section__descvalue">58%</span> de la consommation
           d’eau, suivie par l’eau potable avec
-          <span class="section4__descvalue">26%</span>. Le refroidissement
+          <span class="section__descvalue">26%</span>. Le refroidissement
           des centrales compte pour
-          <span class="section4__descvalue">12%</span>, tandis que
+          <span class="section__descvalue">12%</span>, tandis que
           l’industrie n’en représente que
-          <span class="section4__descvalue">4%</span>.
+          <span class="section__descvalue">4%</span>.
         </p>
 
         <section class="dataviz4">
@@ -101,10 +105,8 @@
     </section>
 
     <!-- SECTION 5 -->
-    <section class="section5 sectionscroll" id="s5">
-      <h2 class="section5__title">
-        À la maison, l’eau coule vite… et se perd souvent
-      </h2>
+    <section class="section section__5 sectionscroll" id="s5">
+      <h2 class="section__title">À la maison, l’eau coule vite… et se perd souvent</h2>
 
       <section class="section5__content">
         <section class="dataviz5">
@@ -120,32 +122,28 @@
           </p>
         </section>
 
-
-        <p class="section5__desc js-split-desc">
+        <p class="section__desc js-split-desc section5__desc">
           La consommation d’eau potable représente environ
-          <span class="section5__descvalue">148 litres par jour et par personne</span>, tandis que l’empreinte en eau
+          <span class="section__descvalue">148 litres par jour et par personne</span>, tandis que l’empreinte en eau
           cachée, qui inclut toute l’eau
           utilisée pour produire notre alimentation et nos biens, atteint
-          <span class="section5__descvalue">4 000 à 9 000 litres par jour et par personne</span>.
+          <span class="section__descvalue">4 000 à 9 000 litres par jour et par personne</span>.
         </p>
       </section>
     </section>
 
     <!-- SECTION 6 -->
-    <section class="section6 sectionscroll" id="s6">
-      <h2 class="section6__title">
-        À la maison, l’eau coule vite… et se perd souvent
-      </h2>
+    <section class="section section__6 sectionscroll" id="s6">
+      <h2 class="section__title">À la maison, l’eau coule vite… et se perd souvent</h2>
 
-      <section class="section6__content">
-        <p class="section6__desc js-split-desc">
+      <section class="section__content">
+        <p class="section__desc js-split-desc">
           La consommation d’eau potable représente environ
-          <span class="section6__descvalue">148 litres par jour et par personne</span>, tandis que l’empreinte en eau
+          <span class="section__descvalue">148 litres par jour et par personne</span>, tandis que l’empreinte en eau
           cachée, qui inclut toute l’eau
           utilisée pour produire notre alimentation et nos biens, atteint
-          <span class="section6__descvalue">4 000 à 9 000 litres par jour et par personne</span>.
+          <span class="section__descvalue">4 000 à 9 000 litres par jour et par personne</span>.
         </p>
-
 
         <section class="dataviz6">
           <canvas class="section6__canvas" id="section6__canvas"></canvas>
@@ -154,65 +152,56 @@
     </section>
 
     <!-- SECTION 7 -->
+    <section class="section section__7 sectionscroll" id="s7">
+      <h2 class="section__title">Les fuites, un gaspillage invisible</h2>
 
-    <section class="section7 sectionscroll" id="s7">
-      <h2 class="section7__title">Les fuites, un gaspillage invisible</h2>
-      <section class="section7__content">
-        <p class="section7__desc js-split-desc">
+      <section class="section__content">
+        <p class="section__desc js-split-desc">
           Un simple robinet qui goutte peut gaspiller jusqu’à 120 litres d’eau par jour, tandis qu’une chasse d’eau
           défectueuse peut dépasser 600 litres par jour, soit bien plus que la consommation quotidienne normale.
         </p>
 
         <section class="dataviz7">
-          <img class="dataviz7__svg" src="/robinet.svg" alt="Robinet">
+          <img class="dataviz7__svg" src="/robinet.svg" alt="Robinet" />
           <canvas class="section7__canvas" id="section7__canvas"></canvas>
         </section>
       </section>
-
     </section>
 
     <!-- SECTION 8 -->
+    <section class="section section__8 sectionscroll" id="s8">
+      <h2 class="section__title">Agir pour préserver l'eau</h2>
 
-    <section class="section8 sectionscroll" id="s8">
-      <h2 class="section8__title">Agir pour préserver l'eau</h2>
-      <section class="section8__content">
+      <section class="section__content">
         <section class="section8__text">
-          <p class="section8__desc js-split-desc">
+          <p class="section__desc js-split-desc">
             Le réseau national d’assainissement et de distribution de l’eau perd environ
           </p>
-          <p class="section8__descvalue js-split-desc">
-            1 litre sur 5</p>
-          <p class="section8__desc js-split-desc">à cause des fuites.</p>
-
+          <p class="section8__descvalue js-split-desc">1 litre sur 5</p>
+          <p class="section__desc js-split-desc">à cause des fuites.</p>
         </section>
+
         <section class="dataviz8">
           <canvas class="section8__canvas" id="section8__canvas"></canvas>
         </section>
       </section>
     </section>
 
-
     <!-- SECTION 9 -->
+    <section class="section section__9 sectionscroll" id="s9">
+      <h2 class="section__title section9__title">Une consommation d’eau souvent invisible</h2>
 
-    <section class="section9 sectionscroll" id="s8">
-      <h2 class="section9__title">Une consommation d’eau souvent invisible</h2>
-      <section class="section9__content">
-        <p class="section9__desc js-split-desc">
-
-
+      <section class="section__content section9__content">
+        <p class="section__desc js-split-desc section9__desc">
           Certains produits du quotidien nécessitent de grandes quantités d’eau pour être fabriqués. Produire un
-          kilogramme de bœuf demande entre <span class="section9__descvalue"> 550 et 700 litres d’eau</span>, et un
+          kilogramme de bœuf demande entre <span class="section9__descvalue">550 et 700 litres d’eau</span>, et un
           litre d’eau embouteillée nécessite en réalité <span class="section9__descvalue">2 litres</span>
           d’eau si l’on prend en compte l’ensemble du processus de production.
           de notre consommation d’eau est indirecte, liée à la production des biens et services que
           nous utilisons quotidiennement.
         </p>
-
-
       </section>
-
-
-
+    </section>
 
   </main>
 

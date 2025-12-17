@@ -142,7 +142,7 @@ gsap.from(".section1__flaque", {
   duration: 0.8,
   ease: "power2.out",
   scrollTrigger: {
-    trigger: ".section",
+    trigger: ".section__1",
     start: "top 80%",
   },
 });
@@ -152,19 +152,18 @@ gsap.to(".dataviz__img", {
   rotation: 360,
   duration: 2,
   scrollTrigger: {
-    trigger: ".section",
+    trigger: ".section__1",
     scrub: true,
   },
 });
 
 // Animation Section 2 en ScrollTrigger
-
-const section2Bg = document.querySelector(".section2__big");
+const section2Bg = document.querySelector(".section__2 .section__big");
 
 gsap.to(section2Bg, {
   backgroundSize: "100% 60%, 100% 100%", // bleu à 70%
   scrollTrigger: {
-    trigger: ".section2__big",
+    trigger: ".section__2 .section__big",
     start: "top 70%",
     end: "top 40%",
     scrub: true,
@@ -174,7 +173,7 @@ gsap.to(section2Bg, {
 // Animation Dataviz3 Glace
 const crackTl = gsap.timeline({
   scrollTrigger: {
-    trigger: ".section3__content",
+    trigger: ".section__3 .section__content",
     start: "50% 70%",
     toggleActions: "play none none none",
   },
@@ -224,13 +223,12 @@ crackTl.to(
 );
 
 // Animation Section 5 - Goutte qui se floutte
-
 gsap.to(".dataviz5__img--blur", {
   clipPath: "inset(13% 0 0 0)",
   opacity: 1,
   ease: "none",
   scrollTrigger: {
-    trigger: ".section5",
+    trigger: ".section__5",
     start: "top 80%",
     end: "top 30%",
     scrub: true,
@@ -241,7 +239,7 @@ gsap.to(".dataviz5", {
   "--blur-fill": "50%",
   ease: "none",
   scrollTrigger: {
-    trigger: ".section5",
+    trigger: ".section__5",
     start: "top 80%",
     end: "top 30%",
     scrub: true,
