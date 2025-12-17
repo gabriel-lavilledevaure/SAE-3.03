@@ -510,10 +510,6 @@ header,
   }
 }
 
-.section__canvas--10 {
-  /* si tu avais une taille spécifique avant, tu peux la remettre ici */
-}
-
 /* SECTION 11 (référence) */
 .section--11 {
   background-color: var(--color-lightpink);
@@ -532,6 +528,37 @@ header,
     max-width: 40rem;
     font-size: 1.25rem;
     line-height: 1.5;
+  }
+  .section__descvalue {
+    font-size: 3rem;
+  }
+}
+
+/* SECTION 12 */
+.section--12 {
+  background-color: var(--color-beige);
+  background-image: url("/flaqueS12.svg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 100% auto;
+  .section__title {
+    align-self: flex-start;
+  }
+  .section__content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    gap: 10rem;
+  }
+  .section__desc {
+    align-self: center;
+    max-width: 35rem;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    padding-bottom: 2rem;
+    text-align: center;
   }
   .section__descvalue {
     font-size: 3rem;

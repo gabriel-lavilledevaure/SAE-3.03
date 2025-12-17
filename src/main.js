@@ -266,3 +266,26 @@ gsap.to("#s5 .dataviz--5", {
     scrub: true,
   },
 });
+
+// Animation section 11 - T shirt et Jean qui apparaissent sur le côté
+gsap.from("#jean", {
+  x: 400,
+  opacity: 0,
+  duration: 1.5,
+  ease: "power2.out",
+  scrollTrigger: {
+    trigger: "#s11",
+    start: "top 80%",
+  },
+});
+
+gsap.from("#tshirt", {
+  x: -400,
+  opacity: 0,
+  duration: 1.5,
+  ease: "power2.out",
+  scrollTrigger: {
+    trigger: "#s11",
+    start: "top 80%",
+  },
+});
