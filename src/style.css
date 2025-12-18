@@ -635,7 +635,7 @@ header,
     font-size: 1.4rem;
     line-height: 1.5;
     padding-bottom: 2rem;
-    text-align: center;
+    text-align: left;
   }
 
   .section__descvalue {
