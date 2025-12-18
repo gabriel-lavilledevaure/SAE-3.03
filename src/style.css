@@ -47,7 +47,6 @@ html {
   text-size-adjust: none;
   scroll-snap-type: y mandatory;
 }
-
 body,
 h1,
 h2,
@@ -58,7 +57,7 @@ figure,
 blockquote,
 dl,
 dd {
-  margin-block-end: 0;
+  margin: 0;
 }
 
 ul[role="list"],
@@ -240,7 +239,6 @@ header,
   background-clip: text;
 }
 
-/* (optionnel, mais utile en sémantique) */
 .section__figure {
   display: flex;
   flex-direction: column;
@@ -514,8 +512,8 @@ header,
 }
 
 .section__canvas--8 {
-  width: 600px;
-  height: 600px;
+  width: 37.5rem;
+  height: 37.5rem;
 }
 
 /* SECTION 9 */
@@ -525,8 +523,8 @@ header,
 }
 
 .section__canvas--9 {
-  width: 600px;
-  height: 600px;
+  width: 37.5rem;
+  height: 37.5rem;
 }
 
 /* SECTION 10 */
@@ -540,8 +538,8 @@ header,
   }
 }
 .section__canvas--10 {
-  width: 600px;
-  height: 600px;
+  width: 37.5rem;
+  height: 37.5rem;
 }
 
 /* SECTION 11 (référence) */
@@ -557,6 +555,8 @@ header,
     align-items: center;
     justify-content: center;
     align-self: center;
+    gap: 30rem;
+    margin: auto;
   }
   .section__desc {
     max-width: 40rem;
@@ -565,6 +565,10 @@ header,
   }
   .section__descvalue {
     font-size: 3rem;
+  }
+  .section__figure {
+    align-self: center;
+    gap: 3rem;
   }
 }
 
