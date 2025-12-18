@@ -306,8 +306,8 @@ header,
 
   .section__goutte {
     position: absolute;
-    left: 14vw;
-    top: 20vh;
+    left: 13vw;
+    top: 13vh;
     width: 10vw;
     max-width: 150px;
     height: auto;
@@ -399,15 +399,29 @@ header,
 }
 
 /* SECTION 4 */
+/* SECTION 4 */
 .section--4 {
   background-color: var(--color-lightyellow);
 }
 
-.section__canvas--4 {
-  width: 600px;
-  height: 600px;
+.section__group-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
 }
 
+.section__star {
+  width: 10rem;
+  height: auto;
+  display: block;
+  margin-left: 2rem;
+}
+
+.section__canvas--4 {
+  width: 37.5rem;
+  height: 37.5rem;
+}
 /* SECTION 5 */
 .section--5 {
   background-color: var(--color-beige);
