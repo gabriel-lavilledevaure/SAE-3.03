@@ -675,6 +675,59 @@ header,
   height: 37.5rem;
 }
 
+/* SECTION 14 */
+
+/* 1. On empile les éléments verticalement */
+.section--14 .section__content {
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem; /* Espace entre chaque flaque */
+}
+
+/* 2. Style de base pour TOUS les textes de cette section */
+.section--14 .section__desc {
+  /* On donne une taille fixe ou min pour que la flaque apparaisse bien */
+  width: 25rem; /* Largeur de la flaque */
+  min-height: 18rem; /* Hauteur min pour contenir le texte */
+
+  /* On utilise Flexbox pour centrer le texte DANS la flaque */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  /* Important : Padding pour que le texte ne touche pas les bords de l'image */
+  padding: 3.5rem;
+
+  /* Gestion de l'image de fond */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%; /* L'image s'étire pour remplir le bloc */
+}
+
+/* 3. Attribution des images une par une */
+/* Le Dataviz au milieu est ignoré car ce n'est pas une balise <p> */
+
+.section--14 .section__desc:nth-of-type(1) {
+  background-image: url("/flaque1.svg");
+}
+
+.section--14 .section__desc:nth-of-type(2) {
+  background-image: url("/flaque2.svg");
+}
+
+.section--14 .section__desc:nth-of-type(3) {
+  background-image: url("/flaque3.svg");
+}
+
+.section--14 .section__desc:nth-of-type(4) {
+  background-image: url("/flaque4.svg");
+}
+
+.section--14 .section__desc:nth-of-type(5) {
+  background-image: url("/flaque5.svg");
+}
+
 /* Footer */
 
 .section--footer {
