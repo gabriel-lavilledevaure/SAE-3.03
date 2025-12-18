@@ -657,75 +657,151 @@ header,
 }
 
 /* Section 14 */
+/* SECTION 14 */
 .section--14 {
   background-color: var(--color-beige);
+  /* Pour éviter que le contenu ne soit coupé si la grille est large */
+  overflow-x: hidden;
+
   .section__title,
   .section__desc,
   .section__descvalue {
     color: var(--color-noir);
   }
 
+  /* --- VERSION MOBILE (Par défaut) --- */
   .section__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
     margin-inline: auto;
   }
-}
 
-.section__canvas--14 {
-  width: 37.5rem;
-  height: 37.5rem;
-}
+  /* Style de base des flaques (texte) */
+  .section__flaque-text {
+    width: 20rem; /* Taille plus petite pour rentrer autour de la carte */
+    min-height: 14rem;
+    padding: 3rem; /* Ajusté pour la taille */
 
-/* SECTION 14 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1rem; /* Texte un peu plus petit pour tout faire rentrer */
+    line-height: 1.3;
 
-/* 1. On empile les éléments verticalement */
-.section--14 .section__content {
-  flex-direction: column;
-  align-items: center;
-  gap: 4rem; /* Espace entre chaque flaque */
-}
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    margin: 0;
+  }
 
-/* 2. Style de base pour TOUS les textes de cette section */
-.section--14 .section__desc {
-  /* On donne une taille fixe ou min pour que la flaque apparaisse bien */
-  width: 25rem; /* Largeur de la flaque */
-  min-height: 18rem; /* Hauteur min pour contenir le texte */
+  /* Attribution des images (vos images SVG) */
+  .section__flaque-text--1 {
+    background-image: url("/flaque1.svg");
+  }
+  .section__flaque-text--2 {
+    background-image: url("/flaque2.svg");
+  }
+  .section__flaque-text--3 {
+    background-image: url("/flaque3.svg");
+  }
+  .section__flaque-text--4 {
+    background-image: url("/flaque4.svg");
+  }
+  .section__flaque-text--5 {
+    background-image: url("/flaque5.svg");
+  }
 
-  /* On utilise Flexbox pour centrer le texte DANS la flaque */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  .section__canvas--14 {
+    width: 100%;
+    max-width: 25rem; /* Taille de la carte sur mobile */
+    height: auto;
+    aspect-ratio: 1/1;
+  }
 
-  /* Important : Padding pour que le texte ne touche pas les bords de l'image */
-  padding: 3.5rem;
+  /* --- VERSION ORDINATEUR (Desktop) --- */
+  /* On active la grille complexe uniquement si l'écran est assez grand */
+  @media (min-width: 1200px) {
+    .section__content {
+      display: grid;
+      /* 3 colonnes : Gauche | Centre (Carte) | Droite */
+      grid-template-columns: 1fr 28rem 1fr;
+      /* 3 lignes pour gérer la hauteur */
+      grid-template-rows: auto auto auto;
+      /* On nomme les zones pour placer facilement les éléments */
+      grid-template-areas:
+        ".        top          ."
+        "left     center       right"
+        "left-bot center       right-bot";
 
-  /* Gestion de l'image de fond */
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100% 100%; /* L'image s'étire pour remplir le bloc */
-}
+      align-items: center;
+      justify-items: center;
+      gap: 1rem;
+      width: 100%;
+      max-width: 90rem; /* Limite la largeur totale */
+    }
 
-/* 3. Attribution des images une par une */
-/* Le Dataviz au milieu est ignoré car ce n'est pas une balise <p> */
+    /* Ajustement de la taille des flaques sur grand écran */
+    .section__flaque-text {
+      width: 22rem;
+      min-height: 16rem;
+      font-size: 1.1rem;
+    }
 
-.section--14 .section__desc:nth-of-type(1) {
-  background-image: url("/flaque1.svg");
-}
+    /* --- PLACEMENT DES ÉLÉMENTS (Selon votre image) --- */
 
-.section--14 .section__desc:nth-of-type(2) {
-  background-image: url("/flaque2.svg");
-}
+    /* 1. "En été..." (Haut Centre) */
+    .section__flaque-text:nth-of-type(1) {
+      grid-area: top;
+      margin-bottom: -4rem; /* Chevauchement léger vers la carte */
+      z-index: 2;
+    }
 
-.section--14 .section__desc:nth-of-type(3) {
-  background-image: url("/flaque3.svg");
-}
+    /* 2. "Une nappe..." (Milieu Droite) */
+    .section__flaque-text:nth-of-type(2) {
+      grid-area: right;
+      justify-self: start; /* Collé à gauche de sa colonne */
+      margin-left: -3rem;
+    }
 
-.section--14 .section__desc:nth-of-type(4) {
-  background-image: url("/flaque4.svg");
-}
+    /* 3. "Les précipitations..." (Bas Droite) */
+    .section__flaque-text:nth-of-type(3) {
+      grid-area: right-bot;
+      align-self: start; /* Remonte un peu */
+    }
 
-.section--14 .section__desc:nth-of-type(5) {
-  background-image: url("/flaque5.svg");
+    /* 4. LE CANVAS (Carte de France au centre) */
+    .dataviz--14 {
+      grid-area: center;
+      z-index: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .section__canvas--14 {
+      max-width: 100%; /* La carte prend toute la place de la colonne centrale */
+      width: 35rem; /* Taille fixe plus grande sur bureau */
+    }
+
+    /* 5. "En août..." (Bas Gauche) */
+    /* Attention : HTML dit que c'est le 4ème <p> (après le dataviz) */
+    .section__flaque-text:nth-of-type(4) {
+      grid-area: left-bot;
+      justify-self: end; /* Poussé vers la droite */
+      align-self: start;
+    }
+
+    /* 6. "Certaines régions..." (Milieu Gauche) */
+    /* C'est le 5ème <p> */
+    .section__flaque-text:nth-of-type(5) {
+      grid-area: left;
+      justify-self: end; /* Poussé vers la droite pour se rapprocher de la carte */
+      margin-right: -3rem;
+    }
+  }
 }
 
 /* Footer */
