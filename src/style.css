@@ -165,9 +165,13 @@ header,
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+
+  /* MODIFICATION : RETOUR À L'ALIGNEMENT GAUCHE */
   align-items: flex-start;
-  padding: 2rem 5rem;
   text-align: left;
+  /* ------------------------------------------- */
+
+  padding: 2rem 5rem;
   color: var(--color-noir);
 }
 
@@ -662,6 +666,14 @@ header,
 /* Section 14 */
 .section--14 {
   background-color: var(--color-beige);
+  overflow-x: hidden;
+
+  background-image: url("/bgfooter.svg");
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: 100% auto;
+
+  padding-bottom: 15rem;
 
   .section__title,
   .section__desc,
@@ -709,9 +721,7 @@ header,
   .section__flaque-text--1 {
     grid-area: top;
     background-image: url("/flaque1.svg");
-    background-size: 130%;
     margin-bottom: -6rem;
-    overflow: visible;
   }
 
   .section__flaque-text--2 {
@@ -767,7 +777,7 @@ header,
 /* Footer */
 
 .section--footer {
-  background-color: var(--color-lightblue);
+  background-color: var(--color-lightblue-2);
   color: var(--color-noir);
   text-align: center;
   padding: 5rem 5rem;
