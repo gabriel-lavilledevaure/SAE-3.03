@@ -151,8 +151,8 @@ header,
   -webkit-mask-repeat: no-repeat, no-repeat;
   mask-repeat: no-repeat, no-repeat;
 
-  -webkit-mask-size: 100% 100%, 800px 800px;
-  mask-size: 100% 100%, 800px 800px;
+  -webkit-mask-size: 100% 100%, 50rem 50rem;
+  mask-size: 100% 100%, 50rem 50rem;
 
   mask-composite: exclude;
 }
@@ -275,7 +275,7 @@ header,
 }
 
 .dataviz__img {
-  width: 300px;
+  width: 18.75rem;
   height: auto;
 }
 
@@ -288,8 +288,8 @@ header,
     left: 0;
     top: 10vh;
     width: 45vw;
-    max-width: 700px;
-    min-width: 420px;
+    max-width: 43.75rem;
+    min-width: 26.25rem;
     height: auto;
     z-index: 0;
     pointer-events: none;
@@ -309,7 +309,8 @@ header,
     left: 13vw;
     top: 13vh;
     width: 10vw;
-    max-width: 150px;
+    max-width: 9.375rem;
+
     height: auto;
     z-index: 2;
     pointer-events: none;
@@ -367,7 +368,8 @@ header,
   .section__goutte {
     display: block;
     width: 8vw;
-    max-width: 120px;
+    max-width: 7.5rem;
+
     height: auto;
     margin-top: 2rem;
     align-self: center;
@@ -398,7 +400,6 @@ header,
   }
 }
 
-/* SECTION 4 */
 /* SECTION 4 */
 .section--4 {
   background-color: var(--color-lightyellow);
@@ -451,7 +452,7 @@ header,
 /* Dataviz 5 (blur + ligne) */
 .dataviz--5 {
   position: relative;
-  width: min(520px, 70vw);
+  width: min(32.5rem, 70vw);
   --blur-fill: 0%;
   .dataviz__img {
     display: block;
@@ -472,11 +473,24 @@ header,
 /* SECTION 6 */
 .section--6 {
   background-color: var(--color-lightgreen);
+  .section__group-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15rem;
+  }
 }
 
 .section__canvas--6 {
-  width: 600px;
-  height: 600px;
+  width: 37.5rem;
+  height: 37.5rem;
+}
+
+.section__gouttegood {
+  width: 10rem;
+  height: auto;
+  display: block;
+  margin-left: 2rem;
 }
 
 .dataviz--6 {
@@ -500,8 +514,8 @@ header,
 }
 
 .section__canvas--7 {
-  width: 400px;
-  height: 400px;
+  width: 25rem;
+  height: 25rem;
 }
 
 .dataviz--7 {
@@ -510,7 +524,7 @@ header,
   align-items: center;
   gap: 1.5rem;
   .dataviz__svg {
-    width: clamp(120px, 12vw, 180px);
+    width: clamp(7.5rem, 12vw, 11.25rem);
     height: auto;
   }
 }
@@ -627,8 +641,8 @@ header,
 }
 
 .section__canvas--13 {
-  width: 600px;
-  height: 600px;
+  width: 37.5rem;
+  height: 37.5rem;
 }
 
 /* Section 14 */
@@ -646,8 +660,8 @@ header,
 }
 
 .section__canvas--14 {
-  width: 600px;
-  height: 600px;
+  width: 37.5rem;
+  height: 37.5rem;
 }
 
 /* Footer */
