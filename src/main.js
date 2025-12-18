@@ -114,7 +114,7 @@ lottieS9.addEventListener("load", () => {
 // ScrollTrigger pour l'animation Lottie dans la section 10
 const lottieS10 = new DotLottie({
   canvas: document.querySelector("#section10__canvas"),
-  src: "https://lottie.host/8e01c333-8d66-4f23-97dc-a70654094175/XLhmV4wvDH.lottie",
+  src: "https://lottie.host/174aa3a1-b6e5-4b28-8d67-8ade48a7f563/SoDKwQC7Ri.lottie",
   autoplay: false,
   loop: false,
 });
@@ -135,7 +135,7 @@ lottieS10.addEventListener("load", () => {
 // ScrollTrigger pour l'animation Lottie dans la section 14
 const lottieS14 = new DotLottie({
   canvas: document.querySelector("#section14__canvas"),
-  src: "https://lottie.host/012da5ee-7239-40e1-bf7a-53612ce14891/TfXcFdwHKO.lottie",
+  src: "https://lottie.host/3bba4859-da47-4253-8c84-c6f8b7bc342f/3Awbfhje35.lottie",
   autoplay: false,
   loop: false,
 });
