@@ -33,7 +33,7 @@ Sensibiliser le grand public à la raréfaction de l’eau et à son rôle centr
 
 - 📊 **Google Sheets (Données et recherches) :** [Consulter les données](https://docs.google.com/spreadsheets/d/1SJBNioMByiNrLoRsrNT8WVPiq8gw8i1KkW119CUFoIM/edit?usp=sharing)
 
-- 🌐 **Site en ligne (GitHub Pages) :** [Voir le site](LIEN_VERS_TA_PAGE_GITHUB_ICI)
+- 🌐 **Site en ligne (GitHub Pages) :** [Voir le site](https://gabriel-lavilledevaure.github.io/SAE-3.03/)
 
 ## 📦 Livrables
 
