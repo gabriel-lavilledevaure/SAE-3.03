@@ -52,7 +52,7 @@ lottieS5.addEventListener("load", () => {
 // ScrollTrigger pour l'animation Lottie dans la section 6
 const lottieS6 = new DotLottie({
   canvas: document.querySelector("#section6__canvas"),
-  src: "https://lottie.host/bbc39380-40f5-449c-8419-ac3b459b3459/Nvd3RfCLhV.lottie",
+  src: "https://lottie.host/a98a6491-ce63-400e-bd3e-3ac4958cbe44/coFHul8Mng.lottie",
   autoplay: false,
   loop: false,
 });
@@ -202,13 +202,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   header.addEventListener("mousemove", (e) => {
     const rect = header.getBoundingClientRect();
-    const x = e.clientX - rect.left - size / 2; // Centrer la flaque horizontalement
-    const y = e.clientY - rect.top - size / 2; // Centrer la flaque verticalement
+    const x = e.clientX - rect.left - size / 2; // Centre la flaque horizontalement
+    const y = e.clientY - rect.top - size / 2; // Centre la flaque verticalement
 
     gsap.to(layer, {
       overwrite: "auto",
-      duration: 0.08, // Durée de l'animation
-      webkitMaskPosition: `0 0, ${x}px ${y}px`, // Position du masque
+      duration: 0.08,
+      webkitMaskPosition: `0 0, ${x}px ${y}px`,
       maskPosition: `0 0, ${x}px ${y}px`,
       ease: "",
     });
@@ -243,7 +243,7 @@ gsap.to("#s1 .dataviz--1 .dataviz__img", {
 const section2Bg = document.querySelector("#s2 .section__big");
 
 gsap.to(section2Bg, {
-  backgroundSize: "100% 60%, 100% 100%", // bleu à 70%
+  backgroundSize: "100% 60%, 100% 100%", // 60% = hauteur
   scrollTrigger: {
     trigger: "#s2 .section__big",
     start: "top 70%",
@@ -259,7 +259,7 @@ const crackTl = gsap.timeline({
     start: "50% 70%",
     toggleActions: "play none none none",
   },
-}); // Timeline pour l'animation de la glace
+});
 
 // petit choc sur la glace
 crackTl.fromTo(
@@ -272,8 +272,7 @@ crackTl.fromTo(
     ease: "power2.out",
     yoyo: true,
     repeat: 3,
-  },
-  0
+  }
 );
 
 // apparition du 3/4

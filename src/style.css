@@ -166,10 +166,8 @@ header,
   display: flex;
   flex-direction: column;
 
-  /* MODIFICATION : RETOUR À L'ALIGNEMENT GAUCHE */
   align-items: flex-start;
   text-align: left;
-  /* ------------------------------------------- */
 
   padding: 2rem 5rem;
   color: var(--color-noir);
