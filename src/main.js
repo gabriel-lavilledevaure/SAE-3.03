@@ -29,6 +29,26 @@ lottieS4.addEventListener("load", () => {
   });
 });
 
+// ScrollTrigger pour l'animation Lottie dans la section 5
+const lottieS5 = new DotLottie({
+  canvas: document.querySelector("#section5__canvas"),
+  src: "https://lottie.host/6e588730-7ceb-4c61-9499-4ac79c66d550/QmtXSz33Yo.lottie",
+  autoplay: false,
+  loop: false,
+});
+
+lottieS5.addEventListener("load", () => {
+  ScrollTrigger.create({
+    trigger: "#section5__canvas",
+    start: "top center",
+    end: "bottom center",
+    onEnter: () => lottieS5.play(),
+    onLeave: () => lottieS5.pause(),
+    onEnterBack: () => lottieS5.play(),
+    onLeaveBack: () => lottieS5.pause(),
+  });
+});
+
 // ScrollTrigger pour l'animation Lottie dans la section 6
 const lottieS6 = new DotLottie({
   canvas: document.querySelector("#section6__canvas"),

@@ -685,9 +685,7 @@ header,
     display: grid;
 
     grid-template-columns: 1fr 30rem 1fr;
-
     grid-template-rows: auto auto auto;
-
     grid-template-areas:
       ".         top          ."
       "left-top  center       right-top"
@@ -698,7 +696,8 @@ header,
     width: 100%;
     max-width: 90rem;
     margin-inline: auto;
-    padding-top: 2rem;
+
+    padding-top: 0;
   }
 
   .section__flaque-text {
